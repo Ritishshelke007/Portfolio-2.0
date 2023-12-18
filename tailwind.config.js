@@ -16,7 +16,8 @@ export default {
         },
       },
       animation: {
-        "spin-slow": "spin-slow 9s linear infinite", // Adjust the duration as needed
+        "spin-slow": "spin-slow 9s linear infinite",
+        
       },
     },
   },

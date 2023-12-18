@@ -8,17 +8,17 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="transition-all ease-in duration-300 flex flex-col justify-center items-center w-full h-[100dvh]  bg-gray-100 dark:bg-gradient-to-r dark:from-slate-900 dark:to-slate-700 md:space-y-28 space-y-5"
+      className="transition-all ease-in duration-300 flex flex-col justify-center items-center w-full h-screen  bg-gray-100 dark:bg-gradient-to-r dark:from-slate-900 dark:to-slate-700 md:space-y-28 space-y-5"
     >
       <div className="flex flex-col-reverse md:flex-row justify-center items-center md:flex max-w-3xl relative md:gap-5 space-x-5">
-        <div className="flex flex-col space-y-4 relative ">
-          <div className=" font-poppins text-slate-900 leading-tight font-bold text-[45px] dark:text-slate-100 text-center  md:text-left">
-            Front-End React Developer
-            <div className="absolute top-[56px] right-16 md:right-48">
-              <img src={waving} alt="waving hand" className="h-14" />
-            </div>
+        <div className="flex flex-col space-y-5 relative ">
+          <div className="pt-5 font-poppins text-slate-900 leading-tight font-bold md:text-[45px] text-[32px] dark:text-slate-100 text-center  md:text-left">
+            Front-End React Developer👋🏻
+            {/* <div className="absolute top-[38px] md:top-14 md:right-52 right-[70px]">
+              <img src={waving} alt="waving hand" className="h-10 md:h-12" />
+            </div> */}
           </div>
-          <div className="font-mulish text-center text-lg text-slate-800 dark:text-slate-400 md:text-left">
+          <div className="font-mulish text-center px-2 text-lg text-slate-800 dark:text-slate-400 md:text-left">
             Hi, I'm Ritish Shelke. A passionate Front-end React Developer based
             in Pune, India. 📍
           </div>
@@ -40,8 +40,8 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="w-[350px] md:max-w-sm flex justify-center items-center">
-          <img src={hero} alt="profile" className="rounded-full" />
+        <div className="w-[250px] md:w-[350px] flex justify-center items-center">
+          <img src={hero} alt="profile" className="rounded-full " />
         </div>
       </div>
 
@@ -50,7 +50,7 @@ const Hero = () => {
           <p className="font-poppins font-bold text-start dark:text-slate-300">
             Tech Stack
           </p>
-          <IoEllipsisHorizontalOutline className="text-2xl w-10 md:hidden" />
+          <IoEllipsisHorizontalOutline className="text-2xl w-10 md:hidden dark:text-slate-400" />
           <p className="hidden md:block font-poppins font-bold text-start dark:text-slate-100">
             |
           </p>

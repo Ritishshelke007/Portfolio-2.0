@@ -4,11 +4,12 @@ import ThemeBtn from "./ThemeBtn";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import { GrClose } from "react-icons/gr";
 import { useState } from "react";
+import { IoCloseSharp } from "react-icons/io5";
 
 const Navbar = () => {
-  const [open, setOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
-  const links = [
+  const menu = [
     {
       name: "Home",
       link: "hero",
@@ -29,82 +30,79 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="nav overflow-hidden w-full py-6 px-14 sticky top-0 shadow-md flex justify-between items-center dark:bg-slate-900 transition-all ease-in duration-300 z-10 bg-white">
-        <div className="font-poppins font-bold text-xl text-slate-900 cursor-pointer dark:text-slate-200">
-          Ritish.dev
-        </div>
+      <nav className="overflow-hidden w-full py-6 px-10 sticky top-0 shadow-md flex md:flex-row justify-between items-center dark:bg-slate-900 transition-all ease-in duration-300 z-10 bg-white">
+        <section className="flex w-full justify-between items-center">
+          <div className="font-poppins font-bold text-xl text-slate-900 cursor-pointer dark:text-slate-200">
+            Ritish.dev
+          </div>
+
+          <HiOutlineMenuAlt3
+            className="md:hidden text-2xl cursor-pointer dark:text-slate-200"
+            onClick={() => setMenuOpen(true)}
+          />
+
+          <ul className="hidden md:flex justify-center items-center space-x-6 font-poppins text-md font-semibold text-slate-900 dark:text-slate-200">
+            {menu.map((linki) => {
+              return (
+                <Link
+                  activeClass="active"
+                  to={linki.link}
+                  spy={true}
+                  smooth={true}
+                  offset={0}
+                  duration={500}
+                  className="hover:text-sky-500 transition-all duration-175 ease-in cursor-pointer "
+                  key={linki.name}
+                >
+                  {linki.name}
+                </Link>
+              );
+            })}
+            <li>|</li>
+            <li className="hover:text-sky-600 transition-all duration-175 ease-in  cursor-pointer">
+              <ThemeBtn />
+            </li>
+          </ul>
+        </section>
 
         <div
-          className="mobile_menu md:hidden text-2xl cursor-pointer z-50"
-          onClick={() => setOpen(!open)}
+          className={`fixed h-full w-screen md:hidden z-50 overflow-hidden bg-black/50 backdrop-blur-sm top-0 left-0  transition-all ease-in duration-300 ${
+            menuOpen ? "translate-x-0" : "-translate-x-full"
+          }
+        }`}
         >
-          {open ? <GrClose /> : <HiOutlineMenuAlt3 />}
+          <section className="text-black bg-white dark:bg-slate-800 flex-col absolute left-0 top-0 h-screen p-8 gap-8 z-50 flex w-full transition-all ease-in duration-300">
+            <IoCloseSharp
+              className="absolute text-3xl top-6 right-10 cursor-pointer dark:text-slate-200"
+              onClick={() => setMenuOpen(false)}
+            />
+
+            <ul className="md:hidden flex flex-col justify-center items-center h-full space-y-10 font-poppins text-md font-semibold text-slate-900 dark:text-slate-200 ">
+              {menu.map((linki) => {
+                return (
+                  <Link
+                    activeClass="active"
+                    to={linki.link}
+                    spy={true}
+                    smooth={true}
+                    offset={0}
+                    duration={500}
+                    className="hover:text-sky-500 transition-all duration-300 ease-in cursor-pointer "
+                    key={linki.name}
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    {linki.name}
+                  </Link>
+                );
+              })}
+
+              <li className="hover:text-sky-600 transition-all duration-175 ease-in  cursor-pointer">
+                <ThemeBtn />
+              </li>
+            </ul>
+          </section>
         </div>
-
-        <ul
-          className={`transition-all ease-in duration-500 md:hidden absolute  flex flex-col justify-center items-center space-y-10 z-10  h-screen left-0 w-full bg-slate-200 font-poppins font-bold ${
-            open ? "-top-20" : "hidden"
-          }`}
-        >
-          <li>Home</li>
-          <li>About</li>
-          <li>Projects</li>
-          <li>Contact</li>
-        </ul>
-
-        <ul className="hidden md:flex justify-center items-center space-x-6 font-poppins text-md font-semibold text-slate-900 dark:text-slate-200">
-          {links.map((linki) => {
-            return (
-              <Link
-                activeClass="active"
-                to={linki.link}
-                spy={true}
-                smooth={true}
-                offset={0}
-                duration={500}
-                className="hover:text-sky-500 transition-all duration-175 ease-in cursor-pointer "
-                key={linki.name}
-              >
-                {linki.name}
-              </Link>
-            );
-          })}
-          <li>|</li>
-          <li className="hover:text-sky-600 transition-all duration-175 ease-in  cursor-pointer">
-            <ThemeBtn />
-          </li>
-        </ul>
-
-        {/* <ul className="hidden md:flex justify-center items-center space-x-6 font-poppins text-md font-semibold text-slate-900 dark:text-slate-200">
-          <li className="hover:text-sky-500 transition-all duration-175 ease-in">
-            <a href="/">Home</a>
-          </li>
-          <Link
-            activeClass="active"
-            to="about"
-            spy={true}
-            smooth={true}
-            offset={50}
-            duration={500}
-            className="hover:text-sky-500 transition-all duration-175 ease-in cursor-pointer "
-          >
-            Test 1
-          </Link>
-          <li className="hover:text-sky-500 transition-all duration-175 ease-in">
-            <a href="#about">About</a>
-          </li>
-          <li className="hover:text-sky-500 transition-all duration-175 ease-in">
-            <a href="#">Projects</a>
-          </li>
-          <li className="hover:text-sky-500 transition-all duration-175 ease-in">
-            <a href="#">Contact</a>
-          </li>
-          <li>|</li>
-          <li className="hover:text-sky-600 transition-all duration-175 ease-in  cursor-pointer">
-            <ThemeBtn />
-          </li>
-        </ul> */}
-      </div>
+      </nav>
     </>
   );
 };

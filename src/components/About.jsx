@@ -9,9 +9,9 @@ const About = () => {
       id="about"
       className="w-full h-screen flex justify-center items-center transition-all ease-in duration-500 dark:bg-gradient-to-r dark:from-slate-900 dark:to-slate-700"
     >
-      <div className="flex flex-col md:flex-row max-w-4xl gap-16">
+      <div className="flex flex-col md:flex-row max-w-4xl gap-6 md:gap-16">
         <div className="md:w-1/2 flex justify-center items-center relative">
-          <img src={about} alt="about image" className="rounded-xl max-w-sm mx-auto md:p-0" />
+          <img src={about} alt="about image" className="rounded-xl max-w-xs md:max-w-sm mx-auto md:p-0" />
           <img
             src={frontendtext}
             alt="frontend image"
@@ -23,7 +23,7 @@ const About = () => {
             className="hidden md:inline-block md:absolute right-0 bottom-[85px] w-12"
           />
         </div>
-        <div className="md:w-1/2 flex flex-col space-y-3 px-5 text-center md:text-start">
+        <div className="md:w-1/2 flex flex-col space-y-3  text-center md:text-start">
           <p className="uppercase font-poppins font-bold text-md  text-sky-500 tracking-wider ">
             about me
           </p>
