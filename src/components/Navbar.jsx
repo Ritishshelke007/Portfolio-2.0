@@ -63,6 +63,7 @@ const Navbar = () => {
                 offset={0}
                 duration={500}
                 className="hover:text-sky-500 transition-all duration-175 ease-in cursor-pointer "
+                key={linki.name}
               >
                 {linki.name}
               </Link>

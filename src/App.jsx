@@ -1,7 +1,8 @@
 import "./App.css";
 import { useState, useEffect } from "react";
-import { Navbar, Hero, About, Projects } from "./components";
+import { Navbar, Hero, About, Projects, Contact } from "./components";
 import { ThemeProvider } from "./context/Theme";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   const [themeMode, setThemeMode] = useState("light");
@@ -22,11 +23,12 @@ function App() {
 
   return (
     <ThemeProvider value={{ themeMode, lightTheme, darkTheme }}>
+      <Toaster position="top-center" />
       <Navbar />
       <Hero />
       <About />
       <Projects />
-      
+      <Contact />
     </ThemeProvider>
   );
 }
