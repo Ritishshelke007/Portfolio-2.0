@@ -8,7 +8,7 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="transition-all ease-in duration-300 flex flex-col justify-center items-center w-full h-screen md:h-[615px] bg-gray-100 dark:bg-gradient-to-r dark:from-slate-900 dark:to-slate-700 md:space-y-28 space-y-5"
+      className="transition-all ease-in duration-300 flex flex-col justify-center items-center w-full h-[100dvh]  bg-gray-100 dark:bg-gradient-to-r dark:from-slate-900 dark:to-slate-700 md:space-y-28 space-y-5"
     >
       <div className="flex flex-col-reverse md:flex-row justify-center items-center md:flex max-w-3xl relative md:gap-5 space-x-5">
         <div className="flex flex-col space-y-4 relative ">

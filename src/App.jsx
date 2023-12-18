@@ -1,6 +1,6 @@
 import "./App.css";
 import { useState, useEffect } from "react";
-import { Navbar, Hero, About } from "./components";
+import { Navbar, Hero, About, Projects } from "./components";
 import { ThemeProvider } from "./context/Theme";
 
 function App() {
@@ -24,7 +24,8 @@ function App() {
     <ThemeProvider value={{ themeMode, lightTheme, darkTheme }}>
       <Navbar />
       <Hero />
-      {/* <About /> */}
+      <About />
+      <Projects />
       
     </ThemeProvider>
   );

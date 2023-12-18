@@ -8,6 +8,16 @@ export default {
         poppins: ["Poppins"],
         mulish: ["Mulish"],
       },
+      keyframes: {
+        "spin-slow": {
+          to: {
+            transform: "rotate(360deg)",
+          },
+        },
+      },
+      animation: {
+        "spin-slow": "spin-slow 9s linear infinite", // Adjust the duration as needed
+      },
     },
   },
   plugins: [require("tailwind-scrollbar")],
