@@ -12,7 +12,7 @@ const Hero = () => {
     >
       <div className="flex flex-col-reverse md:flex-row justify-center items-center md:flex max-w-3xl relative md:gap-5 space-x-5">
         <div className="flex flex-col space-y-5 relative ">
-          <div className="pt-5 font-poppins text-slate-900 leading-tight font-bold md:text-[45px] text-[32px] dark:text-slate-100 text-center  md:text-left">
+          <div className="pt-5 font-poppins text-slate-900 leading-tight font-bold md:text-[45px] text-[38px] dark:text-slate-100 text-center  md:text-left">
             Front-End React Developer👋🏻
             {/* <div className="absolute top-[38px] md:top-14 md:right-52 right-[70px]">
               <img src={waving} alt="waving hand" className="h-10 md:h-12" />

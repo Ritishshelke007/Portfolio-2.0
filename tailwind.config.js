@@ -14,10 +14,18 @@ export default {
             transform: "rotate(360deg)",
           },
         },
+        scrollUp: {
+          "0%": {
+            transform: "translateY(0)",
+          },
+          "100%": {
+            transform: "translateY(-78%)",
+          },
+        },
       },
       animation: {
         "spin-slow": "spin-slow 9s linear infinite",
-        
+        scrollUp: "scrollUp 8s ease-in forwards",
       },
     },
   },
