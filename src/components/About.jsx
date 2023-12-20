@@ -1,7 +1,5 @@
-import React from 'react'
-import about from './about.jpg'
-import frontendtext from './frontendtext.png'
-import working from './working.png'
+import React from "react";
+import { frontendtext, working, about } from "../assets/assets";
 
 const About = () => {
   return (
@@ -11,7 +9,11 @@ const About = () => {
     >
       <div className="flex flex-col md:flex-row max-w-4xl gap-6 md:gap-16">
         <div className="md:w-1/2 flex justify-center items-center relative">
-          <img src={about} alt="about image" className="rounded-xl max-w-xs md:max-w-sm mx-auto md:p-0" />
+          <img
+            src={about}
+            alt="about image"
+            className="rounded-xl max-w-xs md:max-w-sm mx-auto md:p-0"
+          />
           <img
             src={frontendtext}
             alt="frontend image"
@@ -44,6 +46,6 @@ const About = () => {
       </div>
     </section>
   );
-}
+};
 
-export default About
+export default About;

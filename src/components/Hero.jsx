@@ -1,8 +1,7 @@
 import React from "react";
 import { RiLinkedinBoxLine, RiGithubLine } from "react-icons/ri";
 import { IoEllipsisHorizontalOutline } from "react-icons/io5";
-import waving from "./waving.png";
-import hero from "./hero.png";
+import { hero } from "../assets/assets";
 
 const Hero = () => {
   return (

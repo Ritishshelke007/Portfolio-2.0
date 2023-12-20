@@ -1,10 +1,7 @@
 import React, { useState, useEffect } from "react";
-import carrental from "./carrental.png";
-import { RiLinkedinBoxLine, RiGithubLine } from "react-icons/ri";
+import { RiGithubLine } from "react-icons/ri";
 import { BiLinkExternal } from "react-icons/bi";
 import { urlFor, client } from "../client";
-import portfolio from "./portfolio.png";
-import news from "./news.png";
 
 const Projects = () => {
   const [projectList, setProjectList] = useState([]);
@@ -51,7 +48,7 @@ const Projects = () => {
                 </p>
               </div>
               <div>
-                <p className="text-slate-600 text-center dark:text-slate-500">
+                <p className="text-gray-500 text-md font-semibold text-center dark:text-slate-500">
                   {project.description}
                 </p>
               </div>

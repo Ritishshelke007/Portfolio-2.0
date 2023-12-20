@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-scroll";
 import ThemeBtn from "./ThemeBtn";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
-import { GrClose } from "react-icons/gr";
 import { useState } from "react";
 import { IoCloseSharp } from "react-icons/io5";
 

@@ -44,8 +44,8 @@ const Contact = () => {
       id="contact"
       className="w-full h-screen mx-auto font-poppins dark:bg-gradient-to-r dark:from-slate-900 dark:to-slate-700"
     >
-      <div className="flex justify-center items-center w-full h-screen pt-16">
-        <div className="max-w-4xl w-full p-8 md:rounded-xl  flex flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-5 overflow-hidden">
+      <div className="flex flex-col justify-center items-center w-full h-screen space-y-4">
+        <div className="max-w-4xl w-full p-5 mb-0 md:rounded-xl mt-16 flex flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-5 overflow-hidden">
           <div className="flex flex-col justify-between space-y-4 md:w-1/2">
             <div className="space-y-2">
               <h1 className=" text-xl font-bold uppercase text-sky-500">
@@ -88,7 +88,6 @@ const Contact = () => {
               <AiOutlineLinkedin className="dark:text-blue-500" />
             </div>
           </div>
-
           <div className="relative">
             <div className="hidden md:block w-40 h-40 rounded-full bg-sky-400 md:absolute z-0 -top-20 -right-28"></div>
 
@@ -161,7 +160,9 @@ const Contact = () => {
               </form>
             </div>
           </div>
-      
+        </div>
+        <div className="flex w-full justify-center font-bold p-4  mx-auto items-center bottom-0 dark:text-slate-300">
+          Copyright © 2023. All rights are reserved
         </div>
       </div>
     </section>
