@@ -4,9 +4,11 @@ import ThemeBtn from "./ThemeBtn";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import { useState } from "react";
 import { IoCloseSharp } from "react-icons/io5";
+import useReadingProgress from "../hooks/useReadingProgress";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const completion = useReadingProgress();
 
   const menu = [
     {
@@ -29,8 +31,8 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="overflow-hidden w-full py-6 px-10 sticky top-0 shadow-md flex md:flex-row justify-between items-center dark:bg-slate-900 transition-all ease-in duration-300 z-10 bg-white">
-        <section className="flex w-full justify-between items-center">
+      <nav className="overflow-hidden w-full py-6  sticky top-0 shadow-md flex md:flex-row justify-between items-center dark:bg-slate-900 transition-all ease-in duration-300 z-10 bg-white">
+        <section className="flex w-full justify-between items-center px-10">
           <div className="font-poppins font-bold text-xl text-slate-900 cursor-pointer dark:text-slate-200">
             Ritish.dev
           </div>
@@ -101,6 +103,11 @@ const Navbar = () => {
             </ul>
           </section>
         </div>
+
+        <span
+          style={{ transform: `translateX(${completion - 100}%)` }}
+          className="absolute bg-sky-400 h-1 w-full bottom-0 transition-all duration-300 ease-linear    "
+        />
       </nav>
     </>
   );
