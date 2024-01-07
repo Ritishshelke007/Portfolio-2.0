@@ -29,7 +29,7 @@ const Projects = () => {
         const isEvenIndex = index % 2 === 0;
         return (
           <div
-            key={project.id}
+            key={project.index}
             className={`max-w-4xl bg-white mt-10 h-full  md:h-auto md:py-10 flex flex-col md:flex-row justify-center items-center shadow-lg rounded-2xl  gap-10 px-5 py-5 dark:bg-slate-900 transition-all ease-in duration-300 ${
               isEvenIndex ? "md:flex-row" : " md:flex-row-reverse"
             }`}
