@@ -1,13 +1,13 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import {
-  AiOutlineFacebook,
   AiOutlineInstagram,
   AiOutlineLinkedin,
-  AiOutlineTwitter,
+  AiOutlineGithub,
 } from "react-icons/ai";
 import { IoCallOutline, IoMailUnreadOutline } from "react-icons/io5";
 import { toast } from "react-hot-toast";
+import { NavLink } from "react-router-dom";
 
 const Contact = () => {
   const [loading, setLoading] = useState(false);
@@ -82,10 +82,18 @@ const Contact = () => {
             </div>
 
             <div className="hidden md:flex items-center space-x-4 mb-4 py-2 text-2xl">
-              <AiOutlineFacebook className="dark:text-blue-400" />
-              <AiOutlineTwitter className="dark:text-blue-600" />
-              <AiOutlineInstagram className="dark:text-red-600" />
-              <AiOutlineLinkedin className="dark:text-blue-500" />
+              <a
+                href="https://www.linkedin.com/in/ritish-shelke/"
+                target="_blank"
+              >
+                <AiOutlineLinkedin className="hover:text-blue-400" />
+              </a>
+              <a href="https://www.instagram.com/" target="_blank">
+                <AiOutlineInstagram className="hover:text-red-600" />
+              </a>
+              <a href="https://www.github.com/ritishshelke007" target="_blank">
+                <AiOutlineGithub className="hover:text-gray-400" />
+              </a>
             </div>
           </div>
           <div className="relative">

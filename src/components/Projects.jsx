@@ -30,18 +30,18 @@ const Projects = () => {
         return (
           <div
             key={project.index}
-            className={`max-w-4xl bg-white mt-10 h-full  md:h-auto md:py-10 flex flex-col md:flex-row justify-center items-center shadow-lg rounded-2xl  gap-10 px-5 py-5 dark:bg-slate-900 transition-all ease-in duration-300 ${
+            className={` md:max-w-4xl bg-white mt-10   md:h-auto md:py-10 flex flex-col md:flex-row justify-center items-center shadow-lg rounded-2xl  gap-10 px-5 py-5 dark:bg-slate-900 transition-all ease-in duration-300 ${
               isEvenIndex ? "md:flex-row" : " md:flex-row-reverse"
             }`}
           >
-            <div className="h-80 overflow-hidden shadow-xl rounded-xl">
+            <div className="h-60 md:h-72 overflow-hidden shadow-xl rounded-xl md:w-1/2">
               <img
                 src={urlFor(project.imgUrl)}
                 alt="Project Image"
                 className="bg-auto transition-all ease-in-out duration-300 hover:animate-scrollUp cursor-pointer"
               />
             </div>
-            <div className="flex flex-col space-y-5">
+            <div className="flex flex-col space-y-4 md:w-1/2">
               <div>
                 <p className="font-bold text-center dark:text-white">
                   {project.title}
@@ -53,7 +53,7 @@ const Projects = () => {
                 </p>
               </div>
 
-              <div className="flex justify-center items-center space-x-3 font-semibold dark:text-slate-300">
+              <div className="w-full flex flex-wrap justify-center items-center space-x-3 font-semibold dark:text-slate-300 px-2">
                 {project.tags.map((tag, index) => {
                   return (
                     <div

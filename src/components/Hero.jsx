@@ -12,7 +12,7 @@ const Hero = () => {
       <div className="flex flex-col-reverse md:flex-row justify-center items-center md:flex max-w-3xl relative md:gap-5 space-x-5">
         <div className="flex flex-col space-y-5 relative ">
           <div className="pt-5 font-poppins text-slate-900 leading-tight font-bold md:text-[45px] text-[38px] dark:text-slate-100 text-center  md:text-left">
-            Front-End React Developer👋🏻
+            Full-Stack Web Developer👋🏻
             {/* <div className="absolute top-[38px] md:top-14 md:right-52 right-[70px]">
               <img src={waving} alt="waving hand" className="h-10 md:h-12" />
             </div> */}
@@ -57,19 +57,21 @@ const Hero = () => {
 
         <ul className="grid grid-cols-2 md:flex gap-6 md:ml-5">
           <li className="cursor-pointer hover:-translate-y-1 transition-all ease-in duration-300">
-            <img src="https://skillicons.dev/icons?i=html,css" />
-          </li>
-          <li className="cursor-pointer hover:-translate-y-1 transition-all ease-in duration-300">
             <img src="https://skillicons.dev/icons?i=js,ts" />
           </li>
+
           <li className="cursor-pointer hover:-translate-y-1 transition-all ease-in duration-300">
             <img src="https://skillicons.dev/icons?i=react,next" />
           </li>
+
           <li className="cursor-pointer hover:-translate-y-1 transition-all ease-in duration-300">
             <img src="https://skillicons.dev/icons?i=tailwind,materialui" />
           </li>
           <li className="cursor-pointer hover:-translate-y-1 transition-all ease-in duration-300">
-            <img src="https://skillicons.dev/icons?i=java,mysql" />
+            <img src="https://skillicons.dev/icons?i=nodejs,express" />
+          </li>
+          <li className="cursor-pointer hover:-translate-y-1 transition-all ease-in duration-300">
+            <img src="https://skillicons.dev/icons?i=mongo,mysql" />
           </li>
         </ul>
       </div>
