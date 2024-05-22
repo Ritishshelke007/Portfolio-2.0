@@ -34,7 +34,7 @@ const Navbar = () => {
       <nav className="overflow-hidden w-full py-6  sticky top-0 shadow-md flex md:flex-row justify-between items-center dark:bg-slate-900 transition-all ease-in duration-300 z-10 bg-white">
         <section className="flex w-full justify-between items-center px-10">
           <div className="font-poppins font-bold text-xl text-slate-900 cursor-pointer dark:text-slate-200">
-            Ritish.dev
+            Ritish.me
           </div>
 
           <HiOutlineMenuAlt3

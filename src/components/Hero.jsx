@@ -12,13 +12,13 @@ const Hero = () => {
       <div className="flex flex-col-reverse md:flex-row justify-center items-center md:flex max-w-3xl relative md:gap-5 space-x-5">
         <div className="flex flex-col space-y-5 relative ">
           <div className="pt-5 font-poppins text-slate-900 leading-tight font-bold md:text-[45px] text-[38px] dark:text-slate-100 text-center  md:text-left">
-            Full-Stack Web Developer👋🏻
+            Full Stack Web Developer👋🏻
             {/* <div className="absolute top-[38px] md:top-14 md:right-52 right-[70px]">
               <img src={waving} alt="waving hand" className="h-10 md:h-12" />
             </div> */}
           </div>
           <div className="font-mulish text-center px-2 text-lg text-slate-800 dark:text-slate-400 md:text-left">
-            Hi, I'm Ritish Shelke. A passionate Front-end React Developer based
+            Hi, I'm Ritish Shelke. A passionate Full-Stack Web Developer based
             in Pune, India. 📍
           </div>
           <div className="flex justify-center md:justify-start space-x-3 items-center left-0">

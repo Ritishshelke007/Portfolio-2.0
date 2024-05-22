@@ -30,17 +30,19 @@ const About = () => {
             about me
           </p>
           <p className="font-bold text-[24px] dark:text-slate-300">
-            A Dedicated Front-end Developer based in Pune, India 📍
+            A Dedicated Full Stack Web Developer based in Pune, India 📍
           </p>
           <p className="text-slate-700 dark:text-slate-400 font-mulish font-medium tracking-wide px-5 md:px-0">
-            As a Junior Front-End Developer, I possess an impressive arsenal of
-            skills in HTML, CSS, JavaScript, React, Tailwind, and SCSS. I excel
-            in designing and maintaining responsive websites that offer a smooth
-            user experience. My expertise lies in crafting dynamic, engaging
-            interfaces through writing clean and optimized code and utilizing
-            cutting-edge development tools and techniques. I am also a team
-            player who thrives in collaborating with cross-functional teams to
-            produce outstanding web applications.
+            As a Full Stack Web Developer, I bring a comprehensive skill set
+            that spans both front-end and back-end development. My expertise
+            includes HTML, CSS, JavaScript, React, Tailwind, and SCSS on the
+            front end, as well as Node.js, Express, and MongoDB on the back end.
+            I excel in designing and maintaining responsive, dynamic websites
+            that provide a seamless user experience. My strength lies in
+            developing robust, efficient code and leveraging the latest
+            development tools and methodologies. Additionally, I am a
+            collaborative team player who thrives in cross-functional
+            environments, consistently delivering high-quality web applications.
           </p>
         </div>
       </div>
