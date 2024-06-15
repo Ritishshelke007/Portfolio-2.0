@@ -53,7 +53,7 @@ const Projects = () => {
                 </p>
               </div>
 
-              <div className="w-full flex flex-wrap justify-center items-center space-x-3 font-semibold dark:text-slate-300 px-2">
+              <div className="w-full flex flex-wrap justify-center items-center gap-x-3 gap-y-2  font-semibold dark:text-slate-300 px-2">
                 {project.tags.map((tag, index) => {
                   return (
                     <div

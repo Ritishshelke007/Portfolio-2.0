@@ -44,7 +44,7 @@ const Contact = () => {
       id="contact"
       className="w-full h-screen mx-auto font-poppins dark:bg-gradient-to-r dark:from-slate-900 dark:to-slate-700"
     >
-      <div className="flex flex-col justify-center items-center w-full h-screen space-y-4">
+      <div className="flex flex-col justify-center items-center w-full h-screen gap-y-4">
         <div className="max-w-4xl w-full p-5 mb-0 md:rounded-xl mt-16 flex flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-5 overflow-hidden">
           <div className="flex flex-col justify-between space-y-4 md:w-1/2">
             <div className="space-y-2">
@@ -85,14 +85,23 @@ const Contact = () => {
               <a
                 href="https://www.linkedin.com/in/ritish-shelke/"
                 target="_blank"
+                className="p-2 bg-black rounded-full text-white hover:text-sky-400 "
               >
-                <AiOutlineLinkedin className="hover:text-blue-400" />
+                <AiOutlineLinkedin size={22} />
               </a>
-              <a href="https://www.instagram.com/" target="_blank">
-                <AiOutlineInstagram className="hover:text-red-600" />
+              <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                className="p-2 bg-black rounded-full text-white hover:text-red-600"
+              >
+                <AiOutlineInstagram size={22} />
               </a>
-              <a href="https://www.github.com/ritishshelke007" target="_blank">
-                <AiOutlineGithub className="hover:text-gray-400" />
+              <a
+                href="https://www.github.com/ritishshelke007"
+                target="_blank"
+                className="p-2 bg-black rounded-full text-white hover:text-gray-400"
+              >
+                <AiOutlineGithub size={22} />
               </a>
             </div>
           </div>
@@ -169,8 +178,8 @@ const Contact = () => {
             </div>
           </div>
         </div>
-        <div className="flex w-full justify-center font-bold p-4  mx-auto items-center bottom-0 dark:text-slate-300">
-          Copyright © 2023. All rights are reserved
+        <div className="flex w-full justify-center font-bold pt-4   mx-auto items-center bottom-0 dark:text-slate-300">
+          Copyright © {new Date().getFullYear()}. All rights are reserved
         </div>
       </div>
     </section>

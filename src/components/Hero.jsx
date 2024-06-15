@@ -21,21 +21,27 @@ const Hero = () => {
             Hi, I'm Ritish Shelke. A passionate Full-Stack Web Developer based
             in Pune, India. 📍
           </div>
-          <div className="flex justify-center md:justify-start space-x-3 items-center left-0">
-            <a
-              href="https://www.linkedin.com/in/ritish-shelke/"
-              target="blank"
-              className="hover:text-sky-500 transition-all ease-in duration-200"
-            >
-              <RiLinkedinBoxLine className="h-8 w-8 dark:text-slate-300" />
-            </a>
-            <a
-              href="https://github.com/Ritishshelke007"
-              target="blank"
-              className="hover:text-sky-500 transition-all ease-in duration-200"
-            >
-              <RiGithubLine className="h-8 w-8 dark:text-slate-300" />
-            </a>
+          <div className="flex justify-center md:justify-start space-x-4 items-center left-0 ">
+            <div className="group relative inline-block">
+              <a href="https://github.com/Ritishshelke007" target="blank">
+                <RiGithubLine className="h-8 w-8 transform transition-all duration-200 hover:scale-125 hover:text-sky-500 dark:text-slate-300" />
+              </a>
+              <span class="absolute -top-14 left-1/2 transform -translate-x-1/2 z-20 px-4 py-2 text-sm font-bold text-white bg-gray-900 dark:bg-gray-700 dark:text-slate-100 rounded-lg shadow-lg transition-transform duration-300 ease-in-out scale-0 group-hover:scale-100">
+                GitHub
+              </span>
+            </div>
+            <div className="group inline-block relative">
+              <a
+                href="https://www.linkedin.com/in/ritish-shelke/"
+                target="blank"
+                className="hover:text-sky-500 transition-all ease-in duration-200"
+              >
+                <RiLinkedinBoxLine className="h-8 w-8  transform transition-all duration-200 hover:scale-125 hover:text-sky-500 dark:text-slate-300" />
+              </a>
+              <span class="absolute -top-14 left-1/2 transform -translate-x-1/2 z-20 px-4 py-2 text-sm font-bold text-white bg-gray-900  dark:bg-gray-700 dark:text-slate-100 rounded-lg shadow-lg transition-transform duration-300 ease-in-out scale-0 group-hover:scale-100">
+                LinkedIn
+              </span>
+            </div>
           </div>
         </div>
 
