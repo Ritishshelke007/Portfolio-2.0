@@ -1,9 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { RiLinkedinBoxLine, RiGithubLine } from "react-icons/ri";
 import { IoEllipsisHorizontalOutline } from "react-icons/io5";
 import { hero } from "../assets/assets";
+import Skeleton from "./Skeleton";
 
 const Hero = () => {
+  const [imageLoaded, setImageLoaded] = useState(false);
+
+  // State for each skill icon
+  const [jsLoaded, setJsLoaded] = useState(false);
+  const [reactLoaded, setReactLoaded] = useState(false);
+  const [tailwindLoaded, setTailwindLoaded] = useState(false);
+  const [nodeLoaded, setNodeLoaded] = useState(false);
+  const [mongoLoaded, setMongoLoaded] = useState(false);
+
   return (
     <section
       id="hero"
@@ -46,7 +56,16 @@ const Hero = () => {
         </div>
 
         <div className="w-[250px] md:w-[350px] flex justify-center items-center">
-          <img src={hero} alt="profile" className="rounded-full " />
+          {!imageLoaded && (
+            <div className="rounded-full bg-gray-300 dark:bg-slate-500  h-[250px] animate-pulse w-[200px] md:w-[250px]"></div>
+          )}
+          <img
+            src={hero}
+            alt="profile"
+            className="rounded-full "
+            style={{ display: imageLoaded ? "block" : "none" }}
+            onLoad={() => setImageLoaded(true)}
+          />
         </div>
       </div>
 
@@ -61,23 +80,74 @@ const Hero = () => {
           </p>
         </div>
 
+        {/* <ul className="grid md:flex gap-6 md:ml-5">
+          <li className="cursor-pointer hover:-translate-y-1 transition-all ease-in duration-300">
+            <img src="https://skillicons.dev/icons?i=js,ts,react,next,tailwind,materialui,nodejs,express,mongo,mysql" />
+          </li>
+        </ul> */}
+
         <ul className="grid grid-cols-2 md:flex gap-6 md:ml-5">
           <li className="cursor-pointer hover:-translate-y-1 transition-all ease-in duration-300">
-            <img src="https://skillicons.dev/icons?i=js,ts" />
+            {!jsLoaded && (
+              <div className="rounded-lg bg-gray-300 dark:bg-slate-500 w-12 h-12 animate-pulse"></div>
+            )}
+            <img
+              src="https://skillicons.dev/icons?i=js,ts"
+              alt="JavaScript & TypeScript"
+              className={`${jsLoaded ? "opacity-100" : "opacity-0"}`}
+              onLoad={() => setJsLoaded(true)}
+              style={{ display: jsLoaded ? "block" : "none" }}
+            />
           </li>
 
           <li className="cursor-pointer hover:-translate-y-1 transition-all ease-in duration-300">
-            <img src="https://skillicons.dev/icons?i=react,next" />
+            {!reactLoaded && (
+              <div className="rounded-lg bg-gray-300 dark:bg-slate-500 w-12 h-12 animate-pulse"></div>
+            )}
+            <img
+              src="https://skillicons.dev/icons?i=react,next"
+              alt="React & Next.js"
+              className={`${reactLoaded ? "opacity-100" : "opacity-0"}`}
+              onLoad={() => setReactLoaded(true)}
+              style={{ display: reactLoaded ? "block" : "none" }}
+            />
           </li>
 
           <li className="cursor-pointer hover:-translate-y-1 transition-all ease-in duration-300">
-            <img src="https://skillicons.dev/icons?i=tailwind,materialui" />
+            {!tailwindLoaded && (
+              <div className="rounded-lg bg-gray-300 dark:bg-slate-500 w-12 h-12 animate-pulse"></div>
+            )}
+            <img
+              src="https://skillicons.dev/icons?i=tailwind,materialui"
+              alt="Tailwind CSS & Material UI"
+              className={`${tailwindLoaded ? "opacity-100" : "opacity-0"}`}
+              onLoad={() => setTailwindLoaded(true)}
+              style={{ display: tailwindLoaded ? "block" : "none" }}
+            />
           </li>
           <li className="cursor-pointer hover:-translate-y-1 transition-all ease-in duration-300">
-            <img src="https://skillicons.dev/icons?i=nodejs,express" />
+            {!nodeLoaded && (
+              <div className="rounded-lg bg-gray-300 dark:bg-slate-500 w-12 h-12 animate-pulse"></div>
+            )}
+            <img
+              src="https://skillicons.dev/icons?i=nodejs,express"
+              alt="Node.js & Express"
+              className={`${nodeLoaded ? "opacity-100" : "opacity-0"}`}
+              onLoad={() => setNodeLoaded(true)}
+              style={{ display: nodeLoaded ? "block" : "none" }}
+            />
           </li>
           <li className="cursor-pointer hover:-translate-y-1 transition-all ease-in duration-300">
-            <img src="https://skillicons.dev/icons?i=mongo,mysql" />
+            {!mongoLoaded && (
+              <div className="rounded-lg bg-gray-300 dark:bg-slate-500 w-12 h-12 animate-pulse"></div>
+            )}
+            <img
+              src="https://skillicons.dev/icons?i=mongo,mysql"
+              alt="MongoDB & MySQL"
+              className={`${mongoLoaded ? "opacity-100" : "opacity-0"}`}
+              onLoad={() => setMongoLoaded(true)}
+              style={{ display: mongoLoaded ? "block" : "none" }}
+            />
           </li>
         </ul>
       </div>
