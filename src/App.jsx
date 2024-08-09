@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { Navbar, Hero, About, Projects, Contact } from "./components";
 import { ThemeProvider } from "./context/Theme";
 import { Toaster } from "react-hot-toast";
+import Experience from "./components/Experience";
 
 function App() {
   const [themeMode, setThemeMode] = useState("light");
@@ -26,7 +27,7 @@ function App() {
       <Toaster position="top-center" />
       <Navbar />
       <Hero />
-      <About />
+      <Experience />
       <Projects />
       <Contact />
     </ThemeProvider>
