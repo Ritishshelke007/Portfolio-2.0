@@ -56,8 +56,7 @@ const Experience = () => {
               <h3 className="text-3xl font-semibold dark:text-slate-100">
                 Experiences
               </h3>
-            </div>{" "}
-            dark:text-slate-300
+            </div>
           </div>
           <div className="relative col-span-12 px-4 space-y-6 sm:col-span-9">
             <div className="col-span-12 space-y-12 relative md:px-4 sm:col-span-8 sm:space-y-8 sm:before:absolute sm:before:top-2 sm:before:bottom-0 sm:before:w-0.5 sm:before:-left-3 before:bg-gray-300">
