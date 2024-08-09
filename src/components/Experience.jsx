@@ -61,7 +61,7 @@ const Experience = () => {
           <div className="relative col-span-12 px-4 space-y-6 sm:col-span-9">
             <div className="col-span-12 space-y-12 relative md:px-4 sm:col-span-8 sm:space-y-8 sm:before:absolute sm:before:top-2 sm:before:bottom-0 sm:before:w-0.5 sm:before:-left-3 before:bg-gray-300">
               <div className="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:bg-sky-500 ">
-                <div class="cursor-pointer overflow-hidden w-full relative transition-all duration-500 hover:translate-y-2 md:max-w-3xl  bg-neutral-50 rounded-lg shadow-xl flex flex-row items-center justify-evenly gap-2 p-2 before:absolute before:w-full hover:before:top-0 before:duration-500 before:-top-1 before:h-1 before:bg-sky-400 dark:bg-slate-900">
+                <div class="cursor-pointer overflow-hidden w-full relative transition-all duration-500 hover:translate-y-2 md:max-w-3xl  bg-neutral-50 rounded-lg shadow-xl flex flex-row items-center justify-evenly gap-2 p-4 before:absolute before:w-full hover:before:top-0 before:duration-500 before:-top-1 before:h-1 before:bg-sky-400 dark:bg-slate-900">
                   <div>
                     <h2 class="font-bold text-xl dark:text-slate-100">
                       Assessli (One Oath)
@@ -73,13 +73,23 @@ const Experience = () => {
                       APRIL 2024 - JUNE 2024
                     </time>
                     <ul className="list-disk dark:text-slate-400 pt-3">
-                      <li>
+                      <li className="hidden md:block">
                         ● Developed a React-based report generation system,
                         streamlining assessment workflows and replacing the
                         legacy Python solution, which optimized performance and
                         reduced processing time.
                       </li>
-                      <li>
+                      <li className="md:hidden">
+                        ● Developed a React-based report generation system,
+                        streamlining assessment workflows and replacing the
+                        legacy Python solution.
+                      </li>
+                      <li className="md:hidden">
+                        ● Designed and launched Assessli's official website and
+                        contributed to developing an assessment to improve user
+                        experience and system efficiency
+                      </li>
+                      <li className="hidden md:block">
                         ● Designed and launched Assessli's official website and
                         contributed to developing an assessment platform by
                         enhancing frontend and backend functionalities to
@@ -90,7 +100,7 @@ const Experience = () => {
                 </div>
               </div>
               <div className="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:bg-sky-500 ">
-                <div class="cursor-pointer overflow-hidden relative transition-all duration-500 hover:translate-y-2 max-w-3xl  bg-neutral-50 rounded-lg shadow-xl flex flex-row items-center justify-evenly gap-2 p-2 before:absolute before:w-full hover:before:top-0 before:duration-500 before:-top-1 before:h-1 before:bg-sky-400 dark:bg-slate-900">
+                <div class="cursor-pointer overflow-hidden relative transition-all duration-500 hover:translate-y-2 max-w-3xl  bg-neutral-50 rounded-lg shadow-xl flex flex-row items-center justify-evenly gap-2 p-4 before:absolute before:w-full hover:before:top-0 before:duration-500 before:-top-1 before:h-1 before:bg-sky-400 dark:bg-slate-900">
                   <div>
                     <h2 class="font-bold text-xl dark:text-slate-100">
                       IT Jobxs
