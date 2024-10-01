@@ -7,11 +7,16 @@ const Projects = () => {
   const [projectList, setProjectList] = useState([]);
 
   useEffect(() => {
-    const query = '*[_type == "projects"]';
-
-    client.fetch(query).then((data) => setProjectList(data));
-
-    console.log(projectList);
+    const fetchProjects = async () => {
+      const query = '*[_type == "projects"]';
+      await client.fetch(query).then((data) => {
+        const sortedProjects = data.sort(
+          (a, b) => new Date(b._createdAt) - new Date(a._createdAt)
+        );
+        setProjectList(sortedProjects);
+      });
+    };
+    fetchProjects();
   }, []);
 
   return (
@@ -21,7 +26,7 @@ const Projects = () => {
     >
       <div className="pt-10">
         <p className="uppercase font-poppins font-bold text-[18px] text-sky-500 ">
-          portfolio
+          projects
         </p>
       </div>
 
@@ -48,12 +53,12 @@ const Projects = () => {
                 </p>
               </div>
               <div>
-                <p className="text-gray-500 text-md font-semibold text-center dark:text-slate-500">
+                <p className="text-gray-500 text-sm md:text-base font-semibold text-center dark:text-slate-500">
                   {project.description}
                 </p>
               </div>
 
-              <div className="w-full flex flex-wrap justify-center items-center gap-x-3 gap-y-2  font-semibold dark:text-slate-300 px-2">
+              <div className="w-full flex flex-wrap justify-center items-center gap-x-3 gap-y-2  font-semibold dark:text-slate-300 px-2 text-sm md:text-base">
                 {project.tags.map((tag, index) => {
                   return (
                     <div
@@ -66,7 +71,7 @@ const Projects = () => {
                 })}
               </div>
 
-              <div className="flex justify-center items-center space-x-10 text-lg  pt-5 dark:text-slate-200">
+              <div className="flex justify-center items-center space-x-10 md:text-lg  pt-5 dark:text-slate-200">
                 <div className="flex justify-center items-center space-x-1 hover:text-sky-500 transition-all ease-in duration-300 cursor-pointer hover:-translate-y-1">
                   <a
                     href={project.codeLink}
